@@ -19,36 +19,27 @@ class SimpleInterestCalculator extends React.Component{
         this.setState((state) => {
             let newState = state;
             newState.principalAmount = principalAmount;
+            newState.showResult = false;
             return newState;
         });
-
-        if(this.state.showResult){
-            this.showResult();
-        }
     }
 
     setROI(roi){
         this.setState((state) => {
             let newState = state;
             newState.rateOfInterest = roi;
+            newState.showResult = false;
             return newState;
         });
-
-        if(this.state.showResult){
-            this.showResult();
-        }
     }
 
     setTimePeriod(timePeriod){
         this.setState((state) => {
             let newState = state;
             newState.timePeriod = timePeriod;
+            newState.showResult = false;
             return newState;
         });
-
-        if(this.state.showResult){
-            this.showResult();
-        }
     }
 
     showResult(){
